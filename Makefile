@@ -18,6 +18,12 @@ stop:
 stop-all:
 	 docker stop $$(sudo docker ps -a -q)
 
+stop-all-remove:
+	sudo docker stop $$(sudo docker ps -a -q)
+	sudo docker rm $$(sudo docker ps -a -q)
+	sudo docker rmi $$(sudo docker images -a -q)
+	sudo docker network rm $$(sudo docker images -a -q)
+    
 down:
 	$(DOCKER_COMPOSE) down
 
