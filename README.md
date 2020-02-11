@@ -1,5 +1,6 @@
 DOCKER-starter for symfony 4.4
 
+![alt text](capture_sf4.png?raw=true "Default page")
 - apache
 - mysql
 - php
