@@ -31,7 +31,7 @@ prune:
 	docker system prune
 
 install:
-	$(DOCKER_COMPOSE) build
+	$(DOCKER_COMPOSE) build --build-arg PHP_VERSION=$(PHP_VERSION)
 	$(DOCKER_COMPOSE) pull
 	$(DOCKER_COMPOSE) up -d
-	docker exec -it $(CONTAINER_NAME) bash
+	docker exec -it $(CONTAINER_NAME)_php bash
