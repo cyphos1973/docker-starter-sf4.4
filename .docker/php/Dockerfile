@@ -1,4 +1,7 @@
-ARG PHP_VERSION=7.3.14
+#-------------------------------------#
+#   version PHP (default value)(latest version unsupported)
+ARG PHP_VERSION=7.1.33
+#-------------------------------------#
 
 FROM php:${PHP_VERSION}-fpm
 MAINTAINER Gilles BOUCHONNEAU <gilles.bouchonneau@gmail.com>
