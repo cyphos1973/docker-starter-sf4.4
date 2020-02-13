@@ -84,13 +84,6 @@ RUN echo "apc.enable=1" > /usr/local/etc/php/php.ini
 RUN docker-php-ext-install opcache
 COPY opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 
-
-#-------------------------------------#
-# XDEBUG
-#-------------------------------------#
-RUN pecl install xdebug \
-        && docker-php-ext-enable xdebug
-
 #-------------------------------------#
 # GROUPS AND USERS
 #-------------------------------------#
