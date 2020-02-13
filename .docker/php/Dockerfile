@@ -18,8 +18,14 @@ RUN apt-get update \
     zlib1g-dev \
     sudo ssh-client
 
-RUN docker-php-ext-configure zip --with-libzip \
-    && docker-php-ext-install pdo pdo_mysql zip
+#-------------------------------------#
+#   extensions PHP
+#-------------------------------------#
+ADD https://raw.githubusercontent.com/mlocati/docker-php-extension-installer/master/install-php-extensions /usr/local/bin/
+
+RUN chmod uga+x /usr/local/bin/install-php-extensions && sync && \
+    install-php-extensions gd pdo pdo_mysql zip amqp pdo_pgsql pdo_firebird pdo_sqlsrv opcache memcached xdebug ldap
+
 
 COPY php.ini /usr/local/etc/php/php.ini
 COPY php-fpm-pool.conf 	/usr/local/etc/php/pool.d/www.conf
