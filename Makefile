@@ -31,6 +31,8 @@ pull:
 start:
 	$(DOCKER_COMPOSE) up -d --remove-orphans
 
+exec:
+	docker exec -it $(CONTAINER_NAME)_php bash
 stop:
 	$(DOCKER_COMPOSE) stop
 
