@@ -1,4 +1,9 @@
 include .env
+COLOR_RESET       = \033[0m
+COLOR_ERROR       = \033[31m
+COLOR_INFO        = \033[32m
+COLOR_COMMENT     = \033[33m
+COLOR_TITLE_BLOCK = \033[0;44m\033[37m
 DOCKER_COMPOSE		= docker-compose
 SYMFONY			= $(DOCKER_COMPOSE) exec -T php /usr/bin/entrypoint make --directory=app/
 
