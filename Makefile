@@ -6,7 +6,7 @@ COLOR_COMMENT     = \033[33m
 COLOR_TITLE_BLOCK = \033[0;44m\033[37m
 PROJECT			  = "Docker-starter-symfony"
 DOCKER_COMPOSE	  = docker-compose
-SYMFONY			= $(DOCKER_COMPOSE) exec -T php /usr/bin/entrypoint make --directory=app/
+DOCKER_APP        = docker-compose exec php
 
 help:
 	@printf "${COLOR_TITLE_BLOCK}${PROJECT} Makefile${COLOR_RESET}\n"
@@ -54,3 +54,9 @@ install:
 	$(DOCKER_COMPOSE) pull
 	$(DOCKER_COMPOSE) up -d
 	docker exec -it $(CONTAINER_NAME)_php bash
+
+vendor:
+	$(DOCKER_APP) composer install
+
+node_modules:
+	$(DOCKER_APP) yarn install
