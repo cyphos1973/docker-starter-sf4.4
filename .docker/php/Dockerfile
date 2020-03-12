@@ -77,6 +77,11 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
 RUN apt-get update && apt-get install yarn
 
 #-------------------------------------#
+#   Set memory_limit
+#-------------------------------------#
+RUN echo "memory_limit = -1" >> /usr/local/etc/php/php.ini
+
+#-------------------------------------#
 #   Permissions and more !
 #-------------------------------------#
 WORKDIR /var/www/html
