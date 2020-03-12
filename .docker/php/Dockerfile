@@ -25,7 +25,7 @@ RUN apt-get update \
 ADD https://raw.githubusercontent.com/mlocati/docker-php-extension-installer/master/install-php-extensions /usr/local/bin/
 
 RUN chmod uga+x /usr/local/bin/install-php-extensions && sync && \
-    install-php-extensions gd pdo pdo_mysql zip amqp pdo_pgsql pdo_firebird pdo_sqlsrv opcache memcached xdebug ldap
+    install-php-extensions gd pdo pdo_mysql zip amqp pdo_pgsql pdo_firebird pdo_sqlsrv opcache memcached xdebug ldap apcu
 
 
 COPY php.ini /usr/local/etc/php/php.ini
@@ -75,15 +75,6 @@ RUN	echo "deb https://deb.nodesource.com/node_8.x jessie main" >> /etc/apt/sourc
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
 	echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 RUN apt-get update && apt-get install yarn
-
-#-------------------------------------#
-#   APCU
-#-------------------------------------#
-RUN pecl install apcu-${APCU_VERSION} && docker-php-ext-enable apcu
-RUN echo "extension=apcu.so" > /usr/local/etc/php/php.ini
-RUN echo "apc.enable_cli=1" > /usr/local/etc/php/php.ini
-RUN echo "apc.enable=1" > /usr/local/etc/php/php.ini
-
 
 #-------------------------------------#
 #   Permissions and more !
