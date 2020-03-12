@@ -77,11 +77,6 @@ RUN echo "extension=apcu.so" > /usr/local/etc/php/php.ini
 RUN echo "apc.enable_cli=1" > /usr/local/etc/php/php.ini
 RUN echo "apc.enable=1" > /usr/local/etc/php/php.ini
 
-#-------------------------------------#
-#   OPCACHE
-#-------------------------------------#
-RUN docker-php-ext-install opcache
-COPY opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 
 #-------------------------------------#
 # GROUPS AND USERS
