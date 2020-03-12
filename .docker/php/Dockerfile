@@ -80,7 +80,7 @@ RUN echo "apc.enable=1" > /usr/local/etc/php/php.ini
 # GROUPS AND USERS
 #-------------------------------------#
 WORKDIR /var/www/html
-
+RUN usermod -u 1000 www-data
 EXPOSE 9000
 CMD ["php-fpm"]
 
