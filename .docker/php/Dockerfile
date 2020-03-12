@@ -79,7 +79,7 @@ RUN echo "apc.enable=1" > /usr/local/etc/php/php.ini
 #-------------------------------------#
 # GROUPS AND USERS
 #-------------------------------------#
-WORKDIR /home/wwwroot/app
+WORKDIR /var/www/html
 
 EXPOSE 9000
 CMD ["php-fpm"]
