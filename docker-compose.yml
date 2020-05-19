@@ -1,5 +1,18 @@
 version: '3'
 services:
+    gitlab:
+        container_name: ${CONTAINER_NAME}_gitlab
+        image: gitlab/gitlab-ce:latest
+        restart: always
+        hostname: gitlab.example.com
+        ports:
+            - "10443:443"
+            - "10080:80"
+            - "10022:22"
+        volumes:
+            - .docker/gitlab/config:/etc/gitlab
+            - .docker/gitlab/logs/:/var/log/gitlab
+            - .docker/gitlab/data/:/var/opt/gitlab
     apache:
         container_name: ${CONTAINER_NAME}_apache
         image: httpd:2.4.41
