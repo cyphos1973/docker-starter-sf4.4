@@ -403,6 +403,42 @@ private static $installed = array (
         0 => '1.0|2.0',
       ),
     ),
+    'symfony/stopwatch' => 
+    array (
+      'pretty_version' => 'v4.4.20',
+      'version' => '4.4.20.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c5572f6494fc20668a73b77684d8dc77e534d8cf',
+    ),
+    'symfony/translation-contracts' => 
+    array (
+      'pretty_version' => 'v2.4.0',
+      'version' => '2.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '95c812666f3e91db75385749fe219c5e494c7f95',
+    ),
+    'symfony/twig-bridge' => 
+    array (
+      'pretty_version' => 'v4.4.21',
+      'version' => '4.4.21.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f5d0492a38c5325d9c322d406dbe95bc26fc530d',
+    ),
+    'symfony/twig-bundle' => 
+    array (
+      'pretty_version' => 'v4.4.20',
+      'version' => '4.4.20.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '7cee73b45e3bd963a0ab4184f1041dcdc85b6e86',
+    ),
     'symfony/var-dumper' => 
     array (
       'pretty_version' => 'v4.4.21',
@@ -421,6 +457,15 @@ private static $installed = array (
       ),
       'reference' => '3a3ea598bba6901d20b58c2579f68700089244ed',
     ),
+    'symfony/web-profiler-bundle' => 
+    array (
+      'pretty_version' => 'v4.4.21',
+      'version' => '4.4.21.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'bd848a0c0f3e7229e329adeea10e8945f70cb4c9',
+    ),
     'symfony/yaml' => 
     array (
       'pretty_version' => 'v4.4.21',
@@ -429,6 +474,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '3871c720871029f008928244e56cf43497da7e9d',
+    ),
+    'twig/twig' => 
+    array (
+      'pretty_version' => 'v3.3.0',
+      'version' => '3.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1f3b7e2c06cc05d42936a8ad508ff1db7975cdc5',
     ),
   ),
 );
