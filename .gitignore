@@ -1,4 +1,6 @@
 .idea
 .docker/data/*
+.docker/centrifugo
+.docker/gitlab
 .gitignore
 .docker/httpd/logs
