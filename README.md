@@ -9,8 +9,8 @@ Docker-starter-sf4.4 is a reference app with Symfony 4 created to show how creat
 - mysql (latest version)
 - php : 7.1.33 (value default in Dockerfile but you can choose it in .env)
 - phpmyadmin (latest version)
-- composer : 1.9.3
-- yarn : 1.21.1
+- composer : 2.0.12
+- yarn : 1.22.5
 - portainer
 - maildev (not verified)
 - redis (not verified)
@@ -31,6 +31,10 @@ $ cd docker-starter-sf4
 3: Execute these commands below into your working folder to install the project: (see Makefile)
 ```bash
 $ make install
+```
+4: Add the profiler
+```bash
+$ composer req profiler --dev
 ```
 
 ## Usage
